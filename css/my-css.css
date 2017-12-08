@@ -30,6 +30,10 @@ p {
   float: left;
   margin: 7px 24px 7px 0;
 }
+.img-illustr-right {	 
+  float: right;
+  margin: 7px 0 7px 24px;
+}
 .p-illustr {
   text-align: justify;
   white-space: pre-line;
