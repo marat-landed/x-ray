@@ -1,0 +1,36 @@
+.navbar {
+      position: relative;
+	  background-color: #004A7F;
+    }
+	.navbar-brand {
+	  padding: 0px;
+	  height: 50px;
+	}
+	.navbar-brand>img {
+	  height: 100%;
+	  padding: 15px;
+	  width: auto;
+	  padding: 7px 15px;
+	}
+	.footer {
+	  background-color: #004A7F;
+	  color: #aaa;
+	}
+	body > .container {
+      padding: 10px 0 10px 0;
+	}
+	.jumbotron {
+	  padding: 2rem 1rem;
+	  margin-bottom: 0;
+	}
+p {
+ margin-bottom: 0;
+}
+.img-illustr {	 
+  float: left;
+  margin: 7px 24px 7px 0;
+}
+.p-illustr {
+  text-align: justify;
+  white-space: pre-line;
+}

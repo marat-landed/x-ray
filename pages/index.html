@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>X-ray Project</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="sticky-footer-navbar.css">
+  <link rel="stylesheet" href="my-css.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+	<div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+      </button>
+	  <!--<a class="navbar-brand" href="#">X-ray</a>-->
+	  <!-- Бренд или название сайта (отображается в левой части меню) -->
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="Dispute Bills" alt="Название бренда или сайта">
+	  </a>
+	  <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Instruments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+		<!--
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" placeholder="Search" type="text">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+		-->
+      </div>
+	</div>
+  </nav>
+  
+  <div class="container" id="content"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Company X-ray Image</p>
+    </div>
+  </footer>
+
+  <script>
+    // Начальная загрузка главной страницы
+    $("#content").load("Home",function(response, status, xhr) {
+    //$("#header").load("header.html",function(response, status, xhr) {
+      if (status == "error") {
+        var msg = "Sorry but there was an error: ";
+	    alert(msg + xhr.status + " " + xhr.statusText);
+        //$("#error").html(msg + xhr.status + " " + xhr.statusText);
+      }
+    });
+
+    $(function(){
+      // Щелчок по любому элементу меню
+      $(".navbar-nav li").click(function (e) {
+	    // Убираем состояние "активный" со всех пунктов меню
+	    $(".navbar-nav li").removeClass("active");
+	    // Присваиваем состояние "активный" данному пункту меню
+	    $(this).addClass("active");
+        e.preventDefault();
+	    var a_text = jQuery(this).children("a").text(); // Home, About,...
+	    //alert("a_text = " + a_text);
+        //$("#content").load(li_text,function(response, status, xhr) {
+	    $("#content").load(a_text,function(response, status, xhr) {
+	    //$("#header").load("header.html",function(response, status, xhr) {
+	      if (status == "error") {
+	        var msg = "Sorry but there was an error: ";
+		    alert(msg + xhr.status + " " + xhr.statusText);
+	        //$("#error").html(msg + xhr.status + " " + xhr.statusText);
+	      }
+	    });
+	  });
+
+	  // Щелчок по Brant
+	  $(".navbar-brand").on("click", function(){
+	    // Создаем щелчок по Home
+	    $(".navbar-nav li").first().trigger( "click" );
+	  });
+    })
+  </script>
+</body>
+</html>
