@@ -1,0 +1,110 @@
+weath-forec-acc.pp.ua
+
+https://www.imena.ua/site/ua/domains/whois?domain=weath-forec-acc.pp.ua
+
+Domain ID:746169_PPUA-DRS
+Domain Name:WEATH-FOREC-ACC.PP.UA
+Created On:25-May-2016 05:28:00 UTC
+Last Updated On:16-May-2017 16:04:05 UTC
+Expiration Date:25-May-2018 05:28:00 UTC
+Sponsoring Registrar:NIC.UA LLC (nic-mnt-cunic)
+Status:serverDeleteProhibited
+Registrant ID:CRFSFSEPW1EAOB3S-CUNIC
+Registrant Name:Авдеев Михаил Александрович
+Registrant Organization:
+Registrant Street1:въезд Набережный, д. 10, кв. 19
+Registrant Street2:
+Registrant Street3:
+Registrant City:Песочин
+Registrant State/Province:Харьковская
+Registrant Postal Code:62418
+Registrant Country:UA
+Registrant Phone:+380.688922547
+Registrant Fax:
+Registrant Email:avdeevma@yandex.ru
+Admin ID:CRFSFSEPW1EAOB3S-CUNIC
+Admin Name:<not disclosed>
+Admin Organization:<not disclosed>
+Admin Street1:<not disclosed>
+Admin Street2:<not disclosed>
+Admin Street3:<not disclosed>
+Admin City:<not disclosed>
+Admin State/Province:<not disclosed>
+Admin Postal Code:<not disclosed>
+Admin Country:<not disclosed>
+Admin Phone:<not disclosed>
+Admin Fax:<not disclosed>
+Admin Email:<not disclosed>
+Billing ID:NIC-CUNIC
+Billing Name:NIC.UA Hostmaster
+Billing Organization:NIC.UA LLC
+Billing Street1:PO BOX 80
+Billing Street2:
+Billing Street3:
+Billing City:Dnepropetrovsk
+Billing State/Province:DP
+Billing Postal Code:49000
+Billing Country:ua
+Billing Phone:+380.445933222
+Billing Fax:+380.445937569
+Billing Email:support@nic.ua
+Tech ID:NIC-CUNIC
+Tech Name:NIC.UA Hostmaster
+Tech Organization:NIC.UA LLC
+Tech Street1:PO BOX 80
+Tech Street2:
+Tech Street3:
+Tech City:Dnepropetrovsk
+Tech State/Province:DP
+Tech Postal Code:49000
+Tech Country:ua
+Tech Phone:+380.445933222
+Tech Fax:+380.445937569
+Tech Email:support@nic.ua
+Name Server:NS11.UAHOSTING.COM.UA
+Name Server:NS12.UAHOSTING.COM.UA
+
+
+
+https://dig.whois.com.au/whois/avdmikh.tk
+https://www.imena.ua/site/ua/domains/whois?domain=avdmikh.tk
+
+Domain name:
+      AVDMIKH.TK
+
+   Organisation:
+      BV Dot TK
+      Dot TK administrator
+      P.O. Box 11774
+      1001 GT  Amsterdam
+      Netherlands
+      Phone: +31 20 5315725
+      Fax: +31 20 5315721
+      E-mail: abuse: abuse@freenom.com, copyright infringement: copyright@freenom.com
+
+   Domain Nameservers:
+      NS02.FREENOM.COM
+      NS03.FREENOM.COM
+      NS04.FREENOM.COM
+      NS01.FREENOM.COM
+
+
+   Your selected domain name is a Free Domain. That means that,
+   according to the terms and conditions of Free Domain domain names
+   the registrant is BV Dot TK
+
+   Due to restrictions in Dot TK 's Privacy Statement personal information
+   about the user of the domain name cannot be released.
+
+   ABUSE OF A DOMAIN NAME
+   If you want to report abuse of this domain name, please send a
+   detailed email with your complaint to abuse@freenom.com.
+   In most cases Dot TK responds to abuse complaints within one business day.
+
+   COPYRIGHT INFRINGEMENT
+   If you want to report a case of copyright infringement, please send
+   an email to copyright@freenom.com, and include the full name and address of
+   your organization. Within 5 business days copyright infringement notices
+   will be investigated.
+
+   Record maintained by: Dot TK Domain Registry

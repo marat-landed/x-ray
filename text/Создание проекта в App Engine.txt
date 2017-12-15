@@ -1,0 +1,77 @@
+1) клонировать пример хранилища
+TUTORIALDIR=src/proba-ray/nodejs_mvms_quickstart-2017-12-14-12-01
+git clone https://github.com/GoogleCloudPlatform/nodejs-getting-started.git $TUTORIALDIR
+
+2) перейти в каталог с руководствами
+cd $TUTORIALDIR/1-hello-world
+
+3) просмотреть код приложения
+cat app.js
+
+'use strict';
+const express = require('express');
+const app = express();
+// [START hello_world]
+// Say hello!
+app.get('/', (req, res) => {
+  res.status(200).send('Hello, world!');
+});
+// [END hello_world]
+if (module === require.main) {
+  // [START server]
+  // Start the server
+  const server = app.listen(process.env.PORT || 8081, () => {
+    const port = server.address().port;
+    console.log(`App listening on port ${port}`);
+  });
+  // [END server]
+}
+module.exports = app;
+Файл app.js содержит код JavaScript, который запускает сервер и отвечает на запросы
+
+4) просмотреть файл конфигурации
+cat app.yaml
+
+# [START runtime]
+runtime: nodejs
+env: flex
+# [END runtime]
+
+5) установить в Cloud Shell пакеты npm
+npm install
+
+6) проверить, правильно ли работает приложение. Это похоже на процесс отладки на локальной машине. Введите код
+export PORT=8080
+npm start
+
+7) Приложение было запущено в Cloud Shell. Чтобы получить к нему доступ, нажмите кнопку "Просмотреть в браузере" 
+
+8) Чтобы удалить экземпляр приложения, нажмите Ctrl+C в окне Cloud Shell.
+
+9) Удаление дополнительного файла блокировки
+Образец кода, который мы клонируем, содержит как в файле yarn.lock, так и в файле package-lock.json, это нужно, чтобы продемонстрировать, как можно использовать каждую систему управления пакетами. Прежде чем мы сможем развернуть образец, мы должны удалить один из двух файлов.
+rm yarn.lock
+
+10) развернуть приложение с помощью Cloud Shell
+gcloud app deploy --project proba-ray
+
+11) Приложение работает по адресу
+http://proba-ray.appspot.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

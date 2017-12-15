@@ -1,0 +1,14 @@
+Google Cloud Platform:
+- инстанс f1-micro бесплатно навсегда (0.2 vCPU, 0.6 GB RAM, 30 GB HDD, 1 GB трафика в мес€ц)
+- инстанс g1-small за $300 от Google на год (0.5 vCPU, 1.7 GB RAM, 30 GB SSD, 15 GB трафика в мес€ц)
+
+http://x-ray-188416.appspot.com/x-ray/pages/main.html
+https://00e9e64bac1113b1c7f1bf0042e16a0cd026ad467f933d0b74-apidata.googleusercontent.com/download/storage/v1/b/x-ray-188416.appspot.com/o/voina-i-mir.jpg
+
+https://storage.cloud.google.com/x-ray-188416.appspot.com/x-ray/proba.html
+https://storage.cloud.google.com/x-ray-188416.appspot.com/x-ray/proba.html
+
+“ребует входа в аккаунт:
+https://storage.cloud.google.com/x-ray-188416.appspot.com/x-ray/images/seraja-sheika.jpg
+Ќе требует:
+https://storage.googleapis.com/x-ray-188416.appspot.com/x-ray/images/voina-i-mir.jpg

@@ -1,0 +1,7 @@
+AIzaSyANbtgTeJdic-DxgpK0z1W-JYFVS8VfNbc
+
+Клиент OAuth 
+Ваш идентификатор клиента
+605658565263-jd8aoo2vk72msnq7gfs6c1i980rfc2p0.apps.googleusercontent.com
+Ваш секрет клиента 
+WoL77VrynxOPK0e1GzVaXvE5  
