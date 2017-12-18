@@ -43,6 +43,12 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Exec</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Matlab</a>
+          </li>
         </ul>
 		<!--
         <form class="form-inline mt-2 mt-md-0">
@@ -81,9 +87,7 @@
 	    // Присваиваем состояние "активный" данному пункту меню
 	    $(this).addClass("active");
         e.preventDefault();
-	    var a_text = jQuery(this).children("a").text(); // Home, About,...
-	    //alert("a_text = " + a_text);
-        //$("#content").load(li_text,function(response, status, xhr) {
+	    var a_text = jQuery(this).children("a").text(); // a_text = Home, About,...
 	    $("#content").load(a_text,function(response, status, xhr) {
 	    //$("#header").load("header.html",function(response, status, xhr) {
 	      if (status == "error") {

@@ -1,0 +1,74 @@
+<div class="jumbotron"  style="padding:40px;">
+<h1>Matlab</h1>
+<img src="matlablogo.jpg" class="img-illustr">
+<h4>Обработка изображений</h4>
+<p class="p-illustr">Мы проводим анализ фотографий, оценивая разное качество сжатия картинки, если фотография отредактирована, вы можете это в большинстве случаев увидеть, потому что совмещены части изображения с разным качеством.
+
+Мы смотрим, есть ли различия в качестве сжатия на изображении. Обычно фотография сжата равномерно, но если мы обнаруживаем заметную разницу в уровнях сжатия в разных ее частях, то вероятно в фотографию вносились изменения.
+
+Но иногда все еще проще, однажды к нам пришел документ, который якобы доказывал, что Пакистан отправляет оружие Сирийским повстанцам. Мы посмотрели на изображение и увидели, что там были элементы с разным сжатием, и весь текст на фотографии был добавлен в отдельном редакторе.
+
+Иногда все тоньше, но в целом расчет всегда на то, что публика просто не поймет, что изображено на фотографии и не будет разбираться в том, поддельный кадр или настоящий. Плюс ко всему, мы знаем, как государственные медиа с этим работают, они находят какого-нибудь «свидетеля» или «блогера», который не согласен с утверждениями и поддерживает позицию государства, потом этот блогер просто предоставляет свидетельства, и никто не пойдет проверять их. Обычно просто сжатие файла несколько раз подряд с разными compression rate позволяет скрыть следы изменений и редактуры фотографии.
+</p>	
+
+<p>Действия на сервере:</p>
+
+<button id="btn-matlab" title="Обработать изображение Matlab Logo">Process image</button>
+<p>Результат: <span id="result" style="color:green;"></span></p>
+<div id="res-images"></div>
+</div>
+
+<script>
+  $(function(){
+	  // Щелчок по кнопке Matlab на странице Exec
+	  $( "#btn-matlab" ).click(function() {
+	    var parameters = { x1: -17, x2: 0.3 };
+		// AJAX request
+	    $.get( 'matlab-proc', parameters, function(data) {
+		  //console.log(data);
+		  if (data.annotation == 0) {
+		    $('#result').html(data.message);
+		  }	
+		  //console.log(data);
+		});
+		$('#result').html("Программа запущена.");
+		// Запускаем программу, запрашивающую изображения
+		images_list = ['ACMO_matlablogo.jpg', 'BREN_matlablogo.jpg', 'CURV_matlablogo.jpg', 'OUT_matlablogo.jpg', 'OUTMASK_matlablogo.jpg'];
+		requesting_images(images_list);
+	  });
+  })
+  
+  function requesting_images(images_list) {
+    // AJAX request
+	var parameters = {list:images_list};
+	$.get( 'images-list', parameters, function(data) {
+	  var dataJSON = JSON.parse(data);
+	  var new_div = $("<div>", {"class": "one-image"});
+	  $("#res-images").append(new_div);
+	  // Добавляем в div имя файла
+	  var img_filename = $("<p>", {}); //document.createElement("p");
+	  img_filename.append(dataJSON['filename']);
+	  new_div.append(img_filename);
+	  var img = document.createElement("img");
+	  img.src = dataJSON['data'];
+	  img.className += "image-collection";
+	  new_div.append(img);
+	  // Извлекаем из списка имя уже принятого изображения и, если список не пустой, повторяем запрос
+	  removeA(images_list, dataJSON['filename']);
+	  if (images_list.length > 0) {
+	    requesting_images(images_list);
+	  }	
+	});
+  };
+  
+  function removeA(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+  }
+</script>

@@ -1,3 +1,7 @@
+body {
+    background-image: url("101Emboss1.gif");
+    background-repeat: repeat;
+}
 .navbar {
       position: relative;
 	  background-color: #004A7F;
@@ -37,4 +41,14 @@ p {
 .p-illustr {
   text-align: justify;
   white-space: pre-line;
+}
+.one-image {
+  display: inline-block;
+  text-align: center;
+  padding:5px; 
+  vertical-align: top;  
+}
+.image-collection {
+  max-width: 256px;
+  /*max-height: 161px; */
 }

@@ -22,3 +22,5 @@ rm -rf /path/to/dir/*  Ч удалит только содержимое
 https://accounts.google.com/signin/oauth/identifier?client_id=618104708054-jqgabbtcm3fusmhf5hu82r7j8emh7aoa.apps.googleusercontent.com&as=-651bac31fca041c&destination=https%3A%2F%2Fdevshell.appspot.com&approval_state=!ChQ4WWRBUWN4YWlOTUNsOTVVZ0lFbhIfdzBXZDhmWVpPNk1mZ0JkUzcxNXRYREY3ZGszU0F4WQ%E2%88%99ACThZt4AAAAAWi2kqLgqgPJjHfztJ7B9EqdjPlNrAz2m&passive=1209600&oauth=1&sarp=1&scc=1&xsrfsig=AHgIfE-MdfBk_UOa_V6teEtXczTAfsRz3g&flowName=GeneralOAuthFlow
 
 https://8084-dot-3287051-dot-devshell.appspot.com/?authuser=0
+
+https://appengine.google.com/
