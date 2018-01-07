@@ -1,0 +1,17 @@
+Linux extension    |Windows Equivalent    |Short description
+------------------------------------------------------------
+.so, .o            | .dll                 | Объект, который может быть загружен во время выполнения (аналогично DLL)
+.a                 | .lib                 | Static library
+[none], .elf(rare) | .exe, .com(rare)     | Linux executables
+    .bin(rare)     |                      |
+.sh                | .bat                 | Shell script
+.exe               | .exe                 | Mono application, Wine application
+.deb               | .msi                 | Installer package for Debian/Ubuntu releases
+                   |                      |     (Though .deb is much more powerful with 
+                   |                      |     native support for dependencies and repos). Note that .deb is actually a .ar archive with a special control file, a special file order, and a different extension.
+.rpm               | .msi                 | Installer package for RedHat/CentOS releases.
+.tar.gz, .tar, .gz | .zip                 | Compressed files that can contain a program or any other data, like images, documents, etc
+.ko                | .sys                 | Drivers and kernel modules are loaded into the Linux kernel and have more hardware access than other programs.
+.sh, .php, .py, etc| .bat, .vbs           | Linux is capable of running any file that it has an interpreter for. 
+                   |                      |   A line at the top of the file called the shebang specifies what interpreter to run the file with. 
+                   |                      |   Windows only really runs .bat files in this way.

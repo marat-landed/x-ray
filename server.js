@@ -151,19 +151,38 @@ app.get('/images-list',function(req,res){
 });
 
 app.get('/execute',function(req,res){
+	
   // EXEC - (execute) выполнять: const exec = require('child_process').exec;
   // Формируем команду в зависимости от полученных параметров
-  var command_str = path.resolve('execut/Fabrication.exe');
+  //var command_str = path.resolve('/execut/hello');
+  //var command_str = path.resolve('ls -a ./');	
+  //var command_str = path.resolve('find . -type f | wc -l');	
+  //var command_str = path.resolve('ls -a');
+  //var command_str = path.resolve(__dirname + '/execut/hello');
+  //var command_str = path.resolve('ls -a /');	
+  var isWin = /^win/.test(process.platform);
+  var os;
+  var command_str;
+  if (isWin) {
+    command_str = path.resolve('execut/Fabrication.exe');  
+	os = "Windows";
+  } else {
+    fs.chmodSync('./execut/hello', 0777);
+    command_str = './execut/hello'; 
+	os = "no-Windows";
+  }    
   child = exec(command_str, function (error, stdout, stderr) {
-	if (error) {
-	  console.log(error.stack);
-	  console.log('Error code: ' + error.code);
-	  console.log('Signal received: ' + error.signal);
-	  // console.log('exec error: ' + error);
-	  return;
-	}
-	//console.log('stdout: ' + stdout);
-	console.log('stderr: ' + stderr);
+    if (error) {
+      console.log(error.stack);
+      console.log('Error code: ' + error.code);
+      console.log('Signal received: ' + error.signal);
+      var mess_err = 'Error code: ' + error.code + ' Signal received: ' + error.signal;
+      // console.log('exec error: ' + error);
+      var mess = {annotation: 'OS: ' + os + '. Result of program execution (error)', message: mess_err};
+      res.status(200).send(mess);
+      return;
+    }
+    console.log(`Answer: ${stdout}`);
   });
   
   var output_report = '';
@@ -180,7 +199,7 @@ app.get('/execute',function(req,res){
 	// Завершается последним (позже, чем child.on('exit'))
 	console.log(`child process closed with code ${code}`);
 	// Отсылаем отчет
-	var mess = {annotation: 'Result of program execution', message: output_report};
+	var mess = {annotation: 'OS: ' + os + '. Result of program execution', message: output_report};
 	res.status(200).send(mess);
 	console.log('mess = ',mess);
   });
